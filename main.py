@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
-
+import os
 # إعداد Azure OpenAI Client
 endpoint = "https://lahja-dev-resource.openai.azure.com/openai/v1/"
 deployment_name = "gpt-4o"
-api_key = ""
+api_key = os.getenv("keywasm")
 
 client = OpenAI(
     base_url=endpoint,
