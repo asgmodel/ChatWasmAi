@@ -4,6 +4,7 @@ from openai import OpenAI
 import gradio as gr
 import  lahjademo
 import  wasmai
+import  dashbord
 import os
 # إعداد Azure OpenAI Client
 endpoint = "https://lahja-dev-resource.openai.azure.com/openai/v1/"
@@ -34,6 +35,6 @@ async def chat(request: ChatRequest):
     reply = completion.choices[0].message.content
     return {"reply": reply}
 
-
+app = gr.mount_gradio_app(app, dashbord.demo, path='/')
 app = gr.mount_gradio_app(app, lahjademo.demo, path='/lahja')
 app = gr.mount_gradio_app(app, wasmai.demo, path='/wasm')
