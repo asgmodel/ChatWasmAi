@@ -359,10 +359,10 @@ class Gradio_Events:
 
             message = history_messages[-1]["content"]
             print(f"mesg:{message}")
-            response = ask_ai(message[0]['text'])
+            response = ask_ai(message[0]['text']).split('\n')
             audio_file = text_to_speech(message[0]['text'])
             for chunk in response:
-                history[-1]["content"] += chunk
+                history[-1]["content"] += chunk +'\n'
                 history[-1]["audio"] = audio_file
                 history[-1]["loading"] = False
 
