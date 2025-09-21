@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
+import gradio as gr
+import  lahjademo
 import os
 # إعداد Azure OpenAI Client
 endpoint = "https://lahja-dev-resource.openai.azure.com/openai/v1/"
@@ -30,3 +32,7 @@ async def chat(request: ChatRequest):
     
     reply = completion.choices[0].message.content
     return {"reply": reply}
+
+
+app = gr.mount_gradio_app(app, lahjademo.demo, path='/lahja')
+
