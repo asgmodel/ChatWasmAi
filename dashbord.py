@@ -308,7 +308,7 @@ with gr.Blocks() as demo, ms.Application(), antd.ConfigProvider():
                 <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">مشاريعنا</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Project 1 -->
-                    <a href="https://chatwasm.azurewebsites.net/lahja/">
+                    <a href="https://chatwasm.azurewebsites.net/lahja/" target="_self">
                         <div class="bg-white rounded-xl shadow-sm p-5 text-center hover:shadow-md transition-all duration-300 border border-gray-100">
                             <div class="w-14 h-14 mx-auto mb-3 bg-mint-50 rounded-xl flex items-center justify-center shadow-inner">
                                 <i data-feather="mic" class="text-mint w-6 h-6"></i>
@@ -318,7 +318,7 @@ with gr.Blocks() as demo, ms.Application(), antd.ConfigProvider():
                         </div>
                     </a>
                     <!-- Project 2 -->
-                    <a href="https://chatwasm.azurewebsites.net/wasm/">
+                    <a href="https://chatwasm.azurewebsites.net/wasm/" target="_self" >
                         <div class="bg-white rounded-xl shadow-sm p-5 text-center hover:shadow-md transition-all duration-300 border border-gray-100">
                             <div class="w-14 h-14 mx-auto mb-3 bg-mint-50 rounded-xl flex items-center justify-center shadow-inner">
                                 <i data-feather="code" class="text-mint w-6 h-6"></i>
