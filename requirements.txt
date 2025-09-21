@@ -1,2 +1,5 @@
 fastapi[all]
 openai
+modelscope-studio
+azure-cognitiveservices-speech
+gradio
