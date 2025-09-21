@@ -217,8 +217,8 @@ def createTextToSpeech():
                                     value="wasmdashai/vits-ar-sa-huba-v2"
                                 )
                         type_sound = gr.Checkbox(
-                            label="Type Sound",
-                            value=True
+                            label="Lahja",
+                            value=False
                         )
 
                         temperature_slider = gr.Slider(
