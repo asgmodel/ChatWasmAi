@@ -35,6 +35,8 @@ async def chat(request: ChatRequest):
     reply = completion.choices[0].message.content
     return {"reply": reply}
 
-app = gr.mount_gradio_app(app, dashbord.demo, path='/')
+
 app = gr.mount_gradio_app(app, lahjademo.demo, path='/lahja')
 app = gr.mount_gradio_app(app, wasmai.demo, path='/wasm')
+
+app = gr.mount_gradio_app(app, dashbord.demo, path='/')
